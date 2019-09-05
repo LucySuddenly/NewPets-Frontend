@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import {withRouter} from 'react-router';
 import './App.css';
 import Home from './components/containers/Main.js'
+import Login from './components/containers/Login.js'
 import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
 
@@ -25,6 +26,7 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={() =>(<Home/>)}/>
+            <Route exact path="/login" render={()=>(<Login/>)}/>
           </Switch>
         </BrowserRouter>
       </div>
