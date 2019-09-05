@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import {withRouter} from 'react-router';
 import './App.css';
 import Home from './components/containers/Main.js'
 import Login from './components/containers/Login.js'
@@ -17,7 +16,7 @@ function App() {
           </Navbar.Text>
         </a>
         <Navbar.Collapse className="justify-content-end">
-          <Button>
+          <Button href="/login">
             Login or Sign Up
           </Button>
         </Navbar.Collapse>
@@ -34,4 +33,4 @@ function App() {
   );
 }
 
-export default withRouter(App);
+export default App;
