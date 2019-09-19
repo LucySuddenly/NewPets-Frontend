@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
 
   render() {
     return (
+      <>
       <nav class="flex items-center justify-between flex-wrap bg-purple-500 p-4">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
           <span class="font-bold text-xl tracking-tight">PixelPets</span>
@@ -24,10 +24,20 @@ class App extends Component {
             </a>
           </div>
           <div>
-            <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</a>
+            <a href="/login" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</a>
           </div>
         </div>
       </nav>
+      <Router>
+        <Switch>
+          <Route exact path="/"/>
+          <Route exact path="/explore"/>
+          <Route exact path="/arcade"/>
+          <Route exact path="/news"/>
+          <Route exact path="/login"/>
+        </Switch>
+      </Router>
+      </>
     )
   }
 }
