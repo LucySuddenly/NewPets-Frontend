@@ -4,11 +4,19 @@ export class Login extends Component {
     render() {
         return (
             <div className="flex justify-center">
+                <div className="mx-8">
+                    <p>
+                        New Users
+                    </p>
+                    <button href="/newuser" className="text-6xl bg-white shadow-md rounded px-24 py-24 mb-4">
+                        SIGN UP
+                    </button>
+                </div>
                 <div className="w-full max-w-xs">
                     <p>
                         Returning Users
                     </p>
-                    <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                    <form className="bg-white shadow-md rounded px-8 py-8 mb-4">
                         <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
                             Username
